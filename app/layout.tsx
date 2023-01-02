@@ -1,10 +1,21 @@
 import '../styles/globals.css';
+import { FunctionComponent, ReactNode } from 'react';
+import { Header } from '@components/layout/Header/Header';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+interface RootLayoutProps {
+    children: ReactNode;
+}
+
+const RootLayout: FunctionComponent<RootLayoutProps> = ({ children }) => {
     return (
         <html>
+            <title>The Rick and Morty</title>
             <head />
-            <body>{children}</body>
+            <body>
+                <Header />
+                {children}
+            </body>
         </html>
     );
-}
+};
+export default RootLayout;
