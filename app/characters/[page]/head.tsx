@@ -1,7 +1,8 @@
-export default function Head() {
+export default async function Head(params: any) {
+    console.log('params:', params);
     return (
         <>
-            <title>The Rick and Morty</title>
+            <title>Character: </title>
             <meta content="width=device-width, initial-scale=1" name="viewport" />
             <link rel="icon" href="/favicon.ico" />
         </>
